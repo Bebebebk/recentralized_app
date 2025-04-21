@@ -1,0 +1,9 @@
+a='42.8'
+a1=type(a)
+print(a1)
+b=float(a)
+b1=type(b)
+print(b1)
+c=int(b)
+c1=type(c)
+print(c1)
