@@ -1,0 +1,1 @@
+text='data'; a=text.upper() ; b=text.lower() ; print(a,b)
