@@ -1,0 +1,109 @@
+Sprint_3a_task
+
+
+# 1) x-in müsbət, mənfi və ya sıfır olduğunu təyin et
+x = int(input("x-i daxil edin: "))
+if x > 0:
+    print("müsbət")
+elif x < 0:
+    print("mənfi")
+else:
+    print("sıfır")
+print("# ---")
+
+# 2) n-in cüt və ya tək olduğunu təyin et
+n = int(input("n-i daxil edin: "))
+if n % 2 == 0:
+    print("cüt")
+else:
+    print("tək")
+print("# ---")
+
+# 3) a, b, c rəqəmlərinin ən böyüyünü tap
+a = int(input("a-i daxil edin: "))
+b = int(input("b-i daxil edin: "))
+c = int(input("c-i daxil edin: "))
+print("Ən böyük rəqəm:", max(a, b, c))
+print("# ---")
+
+# 4) Gün nömrəsini həftə günü olaraq təyin et
+day = int(input("Günü daxil edin (1-7): "))
+days = {
+    1: "Bazar ertəsi",
+    2: "Çərşənbə axşamı",
+    3: "Çərşənbə",
+    4: "Cümə axşamı",
+    5: "Cümə",
+    6: "Şənbə",
+    7: "Bazar"
+}
+print(days.get(day, "Yanlış gün"))
+print("# ---")
+
+# 5) Temperaturun vəziyyətini təyin et
+temp = int(input("Temperaturu daxil edin: "))
+if temp < 0:
+    print("soyuq")
+elif 0 <= temp <= 20:
+    print("normal")
+else:
+    print("isti")
+print("# ---")
+
+# 6) Şifrənin uzunluğunu təyin et
+password = input("Şifrəni daxil edin: ")
+length = len(password)
+if length < 8:
+    print("qısa")
+elif 8 <= length <= 12:
+    print("orta")
+else:
+    print("uzun")
+print("# ---")
+
+# 7) x-in 3 və 5-ə bölünməsini təyin et
+x = int(input("x-i daxil edin: "))
+if x % 3 == 0 and x % 5 == 0:
+    print("3 və 5")
+elif x % 3 == 0:
+    print("3")
+elif x % 5 == 0:
+    print("5")
+else:
+    print("heç biri")
+print("# ---")
+
+# 8) 0-dan 20-yə qədər cüt rəqəmləri çap et
+for i in range(0, 21, 2):
+    print(i)
+print("# ---")
+
+# 9) "Bağda ərik var idi …" stringinin hər elementini ayrı çap et
+text = "Bağda ərik var idi …"
+for char in text:
+    print(char)
+print("# ---")
+
+# 10) 1-dən 10-a qədər rəqəmləri çap et, amma 3 xaric
+for i in range(1, 11):
+    if i == 3:
+        continue
+    print(i)
+print("# ---")
+
+# 11) İlk 5-ə bölünən rəqəmi tap və dayandır
+i = 1
+while True:
+    if i % 5 == 0:
+        print("İlk 5-ə bölünən rəqəm:", i)
+        break
+    i += 1
+print("# ---")
+
+# 12) (1, 3, 5, 7, 9) içində 5-i tap və indeksini çap et
+numbers = (1, 3, 5, 7, 9)
+for index, num in enumerate(numbers):
+    if num == 5:
+        print("5-in indeksi:", index)
+        break
+print("# ---")
