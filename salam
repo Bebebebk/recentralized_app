@@ -1,0 +1,98 @@
+Sprint_3b_task
+
+
+# 1) salam adlı funksiya
+def salam():
+    print("Salam, Dünya!")
+
+salam()
+print("# ---")
+
+
+# 2) kub_hesabla adlı funksiya
+def kub_hesabla(n):
+    return n ** 3
+
+print("5-in kubu:", kub_hesabla(5))
+print("# ---")
+
+
+# 3) birlesdir adlı funksiya
+def birlesdir(soz1, soz2):
+    return soz1 + " " + soz2
+
+print(birlesdir("Salam", "Dünya"))
+print("# ---")
+
+
+# 4) cap_et adlı funksiya
+def cap_et(liste):
+    for item in liste:
+        print(item)
+
+cap_et([1, 2, 3, "salam", 5])
+print("# ---")
+
+
+# 5) toplam adlı funksiya
+def toplam(*args):
+    return sum(args)
+
+print("Toplam:", toplam(1, 2, 3, 4, 5))
+print("# ---")
+
+
+# 6) ortalama adlı funksiya
+def ortalama(*args):
+    if len(args) == 0:
+        return "Rəqəm yoxdur"
+    return sum(args) / len(args)
+
+print("Ortalama:", ortalama(2, 4, 6))
+print("Ortalama (boş):", ortalama())
+print("# ---")
+
+
+# 7) adlar_rəqəmlər adlı funksiya
+def adlar_rəqəmlər(**kwargs):
+    for ad, rəqəm in kwargs.items():
+        print(f"ad: {ad}, rəqəm: {rəqəm}")
+
+adlar_rəqəmlər(bir=1, iki=2, üç=3)
+print("# ---")
+
+
+# 8) tip_yoxla adlı funksiya
+def tip_yoxla(dəyər):
+    if isinstance(dəyər, str):
+        print("mətn")
+    elif isinstance(dəyər, (int, float)):
+        print("rəqəm")
+    else:
+        print("başqa")
+
+tip_yoxla("Salam")
+tip_yoxla(123)
+tip_yoxla([1, 2, 3])
+print("# ---")
+
+
+# 9) yas_kateqoriya adlı funksiya
+def yas_kateqoriya():
+    yas = int(input("Yaşınızı daxil edin: "))
+    if yas < 18:
+        print("Gənc")
+    else:
+        print("Yetkin")
+
+# yas_kateqoriya()  # Bu sətiri test üçün aktiv et
+print("# ---")
+
+
+# 10) soz_uzunluq adlı funksiya
+def soz_uzunluq():
+    soz = input("Bir söz daxil edin: ")
+    print(f"Sözün uzunluğu: {len(soz)}")
+
+# soz_uzunluq()  # Bu sətiri test üçün aktiv et
+print("# ---")
