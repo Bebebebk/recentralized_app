@@ -1,0 +1,82 @@
+from functools import reduce
+
+# 1) İstifadəçidən iki rəqəm və bir əməliyyat qəbul edən funksiya
+def hesapla():
+    try:
+        a = float(input("Birinci rəqəmi daxil edin: "))
+        b = float(input("İkinci rəqəmi daxil edin: "))
+        emeliyyat = input("Əməliyyatı daxil edin (+, -, *, /): ")
+
+        if emeliyyat == "+":
+            print(f"Nəticə: {a + b}")
+        elif emeliyyat == "-":
+            print(f"Nəticə: {a - b}")
+        elif emeliyyat == "*":
+            print(f"Nəticə: {a * b}")
+        elif emeliyyat == "/":
+            if b == 0:
+                print("Sıfıra bölmək olmaz!")
+            else:
+                print(f"Nəticə: {a / b}")
+        else:
+            print("Yanlış əməliyyat!")
+    except ValueError:
+        print("Yalnız rəqəm daxil edin!")
+    except Exception as e:
+        print(f"Xəta baş verdi: {e}")
+    finally:
+        print("Hesablama bitdi")
+
+# hesapla()  # Test üçün aktiv et
+print("# ---")
+
+
+# 2) 1-dən 50-yə qədər 11-ə qalıqsız bölünən rəqəmlər
+nums = [i for i in range(1, 51) if i % 11 == 0]
+print("11-ə bölünən rəqəmlər:", nums)
+print("# ---")
+
+
+# 3) Sözlərin ilk hərfini qaytaran funksiya
+sozler = ["kitab", "qələm", "defter", "silgi"]
+ilk_hərflər = [s[0] for s in sozler]
+print("İlk hərflər:", ilk_hərflər)
+print("# ---")
+
+
+# 4) Şəhərlər və kodlardan dictionary yaratmaq
+seherler = ["Bakı", "Gəncə", "Sumqayıt"]
+kodlar = [12, 22, 18]
+seher_kod = {seher: kod for seher, kod in zip(seherler, kodlar)}
+print("Şəhər və kodlar:", seher_kod)
+print("# ---")
+
+
+# 5) Kilometri milə çevirən lambda funksiyası
+km_to_miles = lambda km: km * 0.621371
+km_dəyərləri = [5, 10, 15, 20, 25]
+mil_dəyərləri = list(map(km_to_miles, km_dəyərləri))
+print("Mil dəyərləri:", mil_dəyərləri)
+print("# ---")
+
+
+# 6) Qiymətlərə 18% vergi əlavə etmək
+qiymətlər = [100, 200, 300, 400]
+vergili_qiymətlər = list(map(lambda x: x * 1.18, qiymətlər))
+print("Vergili qiymətlər:", vergili_qiymətlər)
+print("# ---")
+
+
+# 7) İki siyahının elementlərini ikiqat artırıb cəmləmək
+list1 = [3, 7, 12]
+list2 = [2, 4, 6]
+ikiqat_toplam = list(map(lambda x, y: (x * 2) + (y * 2), list1, list2))
+print("İkiqat toplama:", ikiqat_toplam)
+print("# ---")
+
+
+# 8) Ən kiçik qiyməti reduce() ilə tapmaq
+qiymətlər = [150, 80, 220, 45]
+ən_kiçik = reduce(lambda x, y: x if x < y else y, qiymətlər)
+print("Ən kiçik qiymət:", ən_kiçik)
+print("# ---")
